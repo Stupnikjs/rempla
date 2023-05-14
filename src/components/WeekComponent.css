@@ -1,0 +1,15 @@
+:root{
+    font-family: "Pacifico", sans-serif;
+    font-weight: 700;
+}
+
+.rempla-div{
+    width: 100%;
+    text-align: "center";
+    display: "flex";
+    justify-content:"center";
+    align-items: "center";
+    height: 100%; 
+    border-radius: 5px;
+    
+}
