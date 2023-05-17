@@ -16,7 +16,6 @@ const dateFromStringFormat = (dateString:string) => {
 export default function (jsonRempla:jsonRempla[]):remplas[]{
     return jsonRempla.map( (el) => {
         const {debut, fin, ...remaining} = el; 
-        console.log(dateFromStringFormat(el.debut))
         return {
             debut: dateFromStringFormat(el.debut), 
             fin: dateFromStringFormat(el.fin), 

@@ -1,4 +1,5 @@
 export interface jsonRempla {
+    id?:string,
     debut: string,
     fin : string, 
     location : string , 

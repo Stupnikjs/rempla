@@ -1,6 +1,7 @@
-import "./FormRempla.css"
+import "./RemplaForm.css"
 import { useEffect, useState } from "react";
 import axios from "axios";
+
 import { jsonRempla } from "../interface/jsonRempla";
 
 
@@ -37,11 +38,13 @@ const FormRempla = () => {
             logiciel: logiciel, 
             retrocession: retrocession,
         }
-        axios.post(`${import.meta.env.VITE_API_REMPLA_URL}/api/create`, rempla)
+        axios.post(`${import.meta.env.VITE_API_REMPLA_URL}/api/create/`, rempla).then(res => {console.log(res.data); window.location.href = "/"})
     }
 
     return (
-           <form action="" className="form" onSubmit={e => {postForm(e)}}>
+        <div>
+            <a href="/"> Calendrier </a>
+            <form action="" className="form" onSubmit={e => {postForm(e)}}>
                 <fieldset style={{
                     display: "flex", 
                     flexDirection: "column",
@@ -67,7 +70,7 @@ const FormRempla = () => {
                         <input type="text" onChange={e => setLogiciel(e.target.value)} ></input>
                         
                         <label>Retrocession </label>
-                        <input type="text" onChange={e => setRetrocession(e.target.value)} ></input>
+                        <div><input type="number" onChange={e => setRetrocession(e.target.value)} ></input><span>%</span></div>
                         
 
                         <input type="submit" style={{fontFamily:'Pacifica'}}></input>
@@ -75,6 +78,8 @@ const FormRempla = () => {
 
 
             </form>
+        </div>
+          
         
     );
 };

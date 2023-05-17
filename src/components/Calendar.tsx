@@ -86,9 +86,10 @@ const Calendar = ({remplasArray}:props) => {
             }}>
                
             {   
-             SliceArrayByN(toDateArray(calendarState, year, selected! - 1), 7, new Date(0, 0, 0)).map( (el:any) => {
-                console.log(el)
-                return <WeekComponent week={el} remplas={remplasArray}></WeekComponent>
+             SliceArrayByN(toDateArray(calendarState, year, selected! - 1), 7, new Date(0, 0, 0)).map( (el:Date[],index:number) => {
+                let mapped:boolean[] = []
+                mapped = el.map((el:Date) => {return el.getFullYear() === 1899})
+                return <WeekComponent key={index} week={el} remplas={remplasArray} mapped={mapped}></WeekComponent>
              })
             }
             

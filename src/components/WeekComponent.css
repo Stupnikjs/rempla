@@ -5,11 +5,19 @@
 
 .rempla-div{
     width: 100%;
-    text-align: "center";
-    display: "flex";
-    justify-content:"center";
-    align-items: "center";
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%; 
     border-radius: 5px;
+    gap: 5%;
     
+    
+}
+
+.logiciel{
+    background-color: beige;
+    font-size: 0.7rem;
+    border-radius: 2px;
 }

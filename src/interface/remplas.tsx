@@ -6,7 +6,8 @@ export interface remplas {
     location : string,
     logiciel: string,  
     retrocession: string, 
-    minutes_from_home: number, 
+    minutes_from_home: number,
+    id?: string, 
 
 }
 

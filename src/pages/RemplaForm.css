@@ -8,6 +8,11 @@
 input[type="date"]{
     height: 3vh;
     width: 50%;
-    margin: 0 auto;
     
+    
+}
+
+input[type="number"]{
+    width: 30%;
+    margin: 0 auto;
 }
